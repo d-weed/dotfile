@@ -1,0 +1,85 @@
+" rotate some keys about to get qwerty "hjkl" back for movement
+noremap n j
+noremap e k
+noremap i l
+noremap N 5j
+noremap E 5k
+noremap I L
+
+" move these keys to their qwerty positions because they are
+" in the way of hjkl (and E for J)
+noremap k n
+noremap K N
+noremap u i
+noremap U I
+noremap l u
+noremap L U
+
+" for use of ; and o
+noremap o ;
+noremap O :
+noremap y o
+noremap Y O
+noremap j y
+noremap J Y
+
+" for use of e key
+noremap f e
+noremap F E
+" ---------------------------------------------------------------
+
+set showcmd
+set ruler
+set cindent
+set autoindent
+set shiftwidth=4
+set tabstop=4
+set cul
+set ignorecase
+
+"set mouse=a
+
+set hls
+set is
+set nu
+filetype plugin indent on
+syntax enable
+
+set background=dark
+let g:solarized_termcolors=256
+colorscheme jellybeans
+
+noremap J 5j
+noremap K 5k
+
+noremap q :q<Enter>
+noremap Q q
+
+"Keep your cursor centered vertically
+set scrolloff=999
+
+" miss operation
+noremap <C-c> <nop>
+noremap <C-x> <nop>
+noremap <C-s> <nop>
+noremap <C-z> <nop>
+
+
+
+call plug#begin()
+
+Plug 'https://github.com/justinmk/vim-syntax-extra.git'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Plug 'preservim/nerdtree'
+call plug#end()
+
+"for airline
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='minimalist'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <C-n> <Plug>AirlineSelectNextTab

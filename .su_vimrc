@@ -1,0 +1,63 @@
+" rotate some keys about to get qwerty "hjkl" back for movement
+noremap n j
+noremap e k
+noremap i l
+noremap N 5j
+noremap E 5k
+noremap I L
+
+" move these keys to their qwerty positions because they are
+" in the way of hjkl (and E for J)
+noremap k n
+noremap K N
+noremap u i
+noremap U I
+noremap l u
+noremap L U
+
+" for use of ; and o
+noremap o ;
+noremap O :
+noremap y o
+noremap Y O
+noremap j y
+noremap J Y
+" ---------------------------------------------------------------
+
+
+set showcmd
+set ruler
+set cindent
+set autoindent
+set shiftwidth=4
+set tabstop=4
+set cul
+set ignorecase
+
+"set mouse=a
+
+set hls
+set is
+set nu
+filetype plugin indent on
+syntax enable
+
+set background=dark
+let g:solarized_termcolors=256
+
+noremap J 5j
+noremap K 5k
+
+noremap q :q<Enter>
+noremap Q q
+
+noremap <C-s> <nop>
+noremap <C-z> <nop>
+noremap <C-c> <nop>
+noremap <C-x> <nop>
+
+"Keep your cursor centered vertically
+set scrolloff=999
+
+
+
